@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class PickUpKey : MonoBehaviour
 {
- Private Void OnTriggerEnter(Collider other)
- {
+ 
+ public ParticleSystem teleporterDust;
 
+
+ private void OnTriggerEnter(Collider other)
+ {
+	gameObject.SetActive(false);
+	teleporterDust.Play();
  }
 }
