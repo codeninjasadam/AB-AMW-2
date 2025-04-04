@@ -31,7 +31,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
+        if (Input.GetButton("Cancel")) ;
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     // Set the game over text and display the popup
@@ -42,6 +45,7 @@ public class GameManager : MonoBehaviour
         buttonText.text = "Click to try again";
         popUp.SetActive(true);
         PlayerPrefs.DeleteKey("LIVES_LEFT");
+        
     }
 
     // Set the success text and display the popup
